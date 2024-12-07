@@ -382,9 +382,19 @@ def data_odyssey_2():
                 ''')
         
         if vis == "Topic Exploration":
+            st.markdown(  
+                """  
+                <style>  
+                .stIFrame {  
+                    margin-left: -35%;
+                }
+                </style>  
+                """,  
+                unsafe_allow_html=True  
+            )  
             st.header("Topic Landscape")
             with open(topic_landscape_loc, 'r') as f:  
-                st.components.v1.html(f.read(), height=450, scrolling=False)
+                st.components.v1.html("<div style='padding-left:35%;'>"+f.read()+"</div>", height=450, width=850,scrolling=False)
             with st.expander("Analysis", expanded=False):
                 st.markdown('''
                 ### Topic Landscape
@@ -401,7 +411,7 @@ def data_odyssey_2():
             st.header("Topic Mapping")
             panel = pyLDAvis.lda_model.prepare(analysis_results['lda_model'], analysis_results['tfidf_matrix'], analysis_results['vectorizer'], mds='tsne')
             html_string = pyLDAvis.prepared_data_to_html(panel)
-            st.components.v1.html(html_string, width=1500, height=800, scrolling=False)
+            st.components.v1.html(html_string, height=800, width=1200,scrolling=False)
             with st.expander("Analysis", expanded=False):
                 st.markdown('''
                 ### Topic Mapping
