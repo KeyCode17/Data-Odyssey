@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 # Libraries
 import os
 import sys
-# import gdown
+import gdown
 
 dirloc = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(dirloc, 'Data Odyssey 1'))
@@ -16,9 +16,9 @@ sys.path.append(os.path.join(dirloc, 'Data Odyssey 2'))
 from data_odyssey_1 import data_odyssey_1
 from data_odyssey_2 import data_odyssey_2
 
-# url = 'https://drive.google.com/file/d/1o7OghxIIZWn43ay2enRoWet6icyKP-Hp/view?usp=sharing'
-# output_path = os.path.join(dirloc, 'Data Odyssey 2', 'model_artifacts', 'fine_tuned_model','model.safetensors')
-# gdown.download(url, output_path, quiet=False,fuzzy=True)
+url = 'https://drive.google.com/file/d/1o7OghxIIZWn43ay2enRoWet6icyKP-Hp/view?usp=sharing'
+output_path = os.path.join(dirloc, 'Data Odyssey 2', 'model_artifacts', 'fine_tuned_model','model.safetensors')
+gdown.download(url, output_path, quiet=False,fuzzy=True)
 
 main_menu = option_menu(None, ["Data Odyssey 1", "Data Odyssey 2"], 
     icons=['bi-wifi',  'bi-newspaper'], 
