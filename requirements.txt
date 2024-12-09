@@ -19,3 +19,4 @@ pyLDAvis==3.4.1
 numpy==1.24.2
 thinc==8.2.0
 gdown==5.2.0
+setuptools
