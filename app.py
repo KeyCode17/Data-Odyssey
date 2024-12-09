@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 # Libraries
 import os
 import sys
-import gdown
+# import gdown
 
 dirloc = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(dirloc, 'Data Odyssey 1'))
